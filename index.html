@@ -123,10 +123,6 @@
       transform: translateY(-900px);
     }
 
-    .loadingScreen {
-      position: absolute;
-    }
-
     #tooltip {
       position: absolute;
       background: #333;
@@ -346,7 +342,6 @@
                   break;
                 }
               }
-              snd.play();
               updateCountries();
             }
           }
@@ -363,8 +358,6 @@
               country.style.fill = "#ffffff18";
               country.setAttribute("percent", "");
             });
-                          snd.play();
-
           }
 
 
