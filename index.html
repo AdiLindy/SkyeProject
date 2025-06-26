@@ -123,6 +123,10 @@
       transform: translateY(-900px);
     }
 
+    .loadingScreen {
+      position: absolute;
+    }
+
     #tooltip {
       position: absolute;
       background: #333;
@@ -305,8 +309,11 @@
   <div>
     <div class="buttonContainer"></div>
         <script>
-        
+          var clip = new Audio("1123pom-3-1.mp3");
+          clip.play();
 
+
+          var snd = new Audio("fartmeme.mp3");
           function remove_(give) {
             let result = "";
             for (let i = 0; i < give.length; i++) {
@@ -342,6 +349,7 @@
                   break;
                 }
               }
+              snd.play();
               updateCountries();
             }
           }
@@ -358,6 +366,8 @@
               country.style.fill = "#ffffff18";
               country.setAttribute("percent", "");
             });
+                          snd.play();
+
           }
 
 
