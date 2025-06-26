@@ -304,7 +304,8 @@
   </script>
 </head>
 <body>
-  <video id="vid" width="100%" class="loadingScreen" autoplay muted onended="this.remove()">
+  <video id="vid" width="100%" class="loadingScreen" autoplay muted onended="this.remove()" onclick="var newclop = new Audio("startupt.mp3");
+          newclop.muted = true;">
     <source src="1123pom-3-1.mp4" type="video/mp4">
   </video>
   <div class="title" onclick="this.classList.add('active')">
@@ -314,14 +315,7 @@
   <div>
     <div class="buttonContainer"></div>
         <script>
-          var newclop = new Audio("startupt.mp3");
-          newclop.muted = true;
-          newclop.play().then(() => {
-            setTimeout(() => {
-              newclop.muted = false;
-              newclop.volume = 1.0;
-            }, 100);
-          });
+        
 
           function remove_(give) {
             let result = "";
