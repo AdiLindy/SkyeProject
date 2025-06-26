@@ -315,7 +315,13 @@
     <div class="buttonContainer"></div>
         <script>
           var newclop = new Audio("startupt.mp3");
-          newclop.play();
+          newclop.muted = true;
+          newclop.play().then(() => {
+            setTimeout(() => {
+              newclop.muted = false;
+              newclop.volume = 1.0;
+            }, 100);
+          });
 
           function remove_(give) {
             let result = "";
