@@ -92,6 +92,7 @@
       font-family: cursive;
       font-size: 100px;
       text-shadow: #333;
+      transform: translateY(-900px);
     }
 
     .title:active {
@@ -105,6 +106,7 @@
       font-family: cursive;
       font-size: 100px;
       text-shadow: #333;
+      transform: translateY(-900px);
     }
 
     .title.active {
@@ -121,6 +123,10 @@
       font-weight: 1;
       letter-spacing: 15px;
       transform: translateY(-900px);
+    }
+
+    .loadingScreen {
+      position: absolute;
     }
 
     #tooltip {
@@ -298,6 +304,9 @@
   </script>
 </head>
 <body>
+  <video id="vid" width="100%" class="loadingScreen" autoplay muted onended="this.remove()">
+    <source src="1123pom-3-1.mp4" type="video/mp4">
+  </video>
   <div class="title" onclick="this.classList.add('active')">
     Skye's torturous unnesscarrry piece-of insignifcant doodoo 
     (STUPID)
@@ -305,6 +314,9 @@
   <div>
     <div class="buttonContainer"></div>
         <script>
+          var clip = new Audio("1123pom-3-1.mp3");
+          clip.play();
+
 
           var snd = new Audio("fartmeme.mp3");
           function remove_(give) {
@@ -405,7 +417,6 @@
               console.log(`rgba(${r}, ${g}, ${b}, ${sum})`);
               countries[i].style.fill = `rgba(${r}, ${g}, ${b}, ${sum})`;
             }
-
 
 
 
