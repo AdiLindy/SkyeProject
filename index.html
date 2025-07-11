@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>STUPID</title>
+  <title>Political Percentile Mixer</title>
   <link rel="icon" type="image/x-icon" href="View recent photos.jpeg">
   <style>
     button {
@@ -82,49 +82,15 @@
   
     }
 
-    .title {
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      text-align: center;
-      align-self: center;
-      color: red;
-      font-family: cursive;
-      font-size: 100px;
-      text-shadow: #333;
-    }
-
-    .title:active {
-      transition: ease, 0.2s;
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      text-align: center;
-      align-self: center;
-      color: blue;
-      font-family: cursive;
-      font-size: 100px;
-      text-shadow: #333;
-    }
-
-    .title.active {
-      transition: ease, 0.2s;
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      text-align: center;
-      align-self: center;
-      color: rgb(255, 251, 0);
-      font-family: cursive;
-      font-size: 100px;
-      text-shadow: #333;
-      font-weight: 1;
-      letter-spacing: 15px;
-      transform: translateY(-900px);
-    }
-
     .loadingScreen {
       position: absolute;
+    }
+
+    .credit {
+      position: fixed;
+      color: white;
+      bottom: 10px;
+      left: 10px;
     }
 
     #tooltip {
@@ -302,18 +268,13 @@
   </script>
 </head>
 <body>
-  <div class="title" onclick="this.classList.add('active')">
-    Skye's torturous unnesscarrry piece-of insignifcant doodoo 
-    (STUPID)
-  </div>
   <div>
+    <div class="credit">
+      Code By Ardeshir L. | Data By Skye C.
+    </div>
     <div class="buttonContainer"></div>
         <script>
-          var clip = new Audio("1123pom-3-1.mp3");
-          clip.play();
 
-
-          var snd = new Audio("fartmeme.mp3");
           function remove_(give) {
             let result = "";
             for (let i = 0; i < give.length; i++) {
@@ -349,8 +310,6 @@
                   break;
                 }
               }
-              snd.play();
-              updateCountries();
             }
           }
 
@@ -366,7 +325,6 @@
               country.style.fill = "#ffffff18";
               country.setAttribute("percent", "");
             });
-                          snd.play();
 
           }
 
