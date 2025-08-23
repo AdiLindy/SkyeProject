@@ -73,6 +73,10 @@
       float:left;
     }
 
+    .sliderContainer{
+      align-content: center;
+    }
+
     .map {
       float: left;
     }
@@ -297,7 +301,6 @@
           });
 
           var elems = document.querySelectorAll('button');
-          //console.log(elems);
           for (var i = 0; i < elems.length; i++) {
             elems[i].onclick = function() {
               console.log(this.style.backgroundColor);
@@ -310,6 +313,7 @@
                   break;
                 }
               }
+              updateCountries();
             }
           }
 
@@ -585,7 +589,6 @@
               }
               this.style.fill = "white";
               alterBoxHeights(sts[i]);
-                            snd.play();
             }
 
             sts[i].addEventListener("mouseleave", () => {
@@ -597,18 +600,24 @@
       </div>      
     </div>
   </div>
-  <button>TOGGLE UK</button>
+  </body>
 
-  <input type="range" min="1000" max="2025" value="2025" id="mySlider" style="width: 300px; background-color: #fff;">
-  <p>Date: <span id="sliderValue">2025</span></p>
-  <script>
-    const slider = document.getElementById("mySlider");
-    const output = document.getElementById("sliderValue");
+  <div class="sliderContainer">
+    <button>TOGGLE UK</button>
 
-    slider.addEventListener("input", () => {
-      output.textContent = slider.value;
-    });
-  </script>
+    <input type="range" min="1000" max="2025" value="2025" id="mySlider" style="width: 300px; background-color: #fff;">
+    <p>Date: <span id="sliderValue">2025</span></p>
+    <script>
+      const slider = document.getElementById("mySlider");
+      const output = document.getElementById("sliderValue");
+
+      slider.addEventListener("input", () => {
+        output.textContent = slider.value;
+      });
+
+
+    </script>
+  </div>
 
 </body>
 </html>
